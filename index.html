@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>定位滚动</title>
+<style>
+	*{margin:0;padding:0;list-style-type:none;}
+	body{font-family:Arial,"microsoft yahei";}
+	header,footer{height:500px;background:#ddd;text-align:center;line-height:400px;}
+
+	.js_section{width:1200px;margin:30px auto;height:500px;background:#eee;line-height:500px;text-align:center;}
+	.side-nav{position:fixed;left:50%;margin-left:720px;width:120px;top:50%;margin-top:-60px;}
+	.side-nav li{width:120px;height:35px;line-height:35px;text-align:center;margin-top:2px;}
+	.side-nav li a{display:block;background:#eee;color:#666;text-decoration:none;font-size:14px;}
+	.side-nav li.on a,.side-nav li a:hover{background:#666;color:#fff;}
+
+</style>
+</head>
+<body>
+	<header>这是头部</header>
+
+	<div class="js_section">section 1</div>
+	<div class="js_section">section 2</div>
+	<div class="js_section">section 3</div>
+	<div class="js_section">section 4</div>
+	<div class="js_section">section 5</div>
+
+	<footer>这是底部</footer>
+
+	<div class="side-nav">
+		<ul>
+			<li class="js_clickItem"><a href="javascript:;">导航一</a></li>
+			<li class="js_clickItem"><a href="javascript:;">导航二</a></li>
+			<li class="js_clickItem"><a href="javascript:;">导航三</a></li>
+			<li class="js_clickItem"><a href="javascript:;">导航四</a></li>
+			<li class="js_clickItem"><a href="javascript:;">导航五</a></li>
+		</ul>
+	</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/pageScroll.js"></script>
+<script type="text/javascript">
+	$.pageScroll({
+		clickItem : ".js_clickItem",
+		targetItem : ".js_section",
+		currentClass : "on",
+		deviation : -15,
+		end : function(){
+			alert("OK")
+		}
+	});
+</script>
+</body>
+</html>
