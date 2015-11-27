@@ -30,7 +30,8 @@
 			//判断导航是否有对应板块
             var targetOffsetTop = $(_this.options.targetItem).eq(i).length ? $(_this.options.targetItem).eq(i).offset().top : false,
 				//如果不这么处理，animate回调(end)会执行2次
-				ele = navigator.userAgent.toLowerCase().indexOf("msie") > -1 ? "html" : "body",
+				UA = navigator.userAgent.toLowerCase(),
+				ele = UA.indexOf("msie") > -1 || UA.indexOf("firefox") > -1 ? "html" : "body";
 				//导航在顶部时会用到导航的高度
 				navHeight = _this.options.position == "top" ?  $(_this.options.navObj).outerHeight(true) : 0;
 				
