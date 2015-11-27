@@ -59,7 +59,7 @@
                 }
 
                 if(_this.options.isSaveHash){
-                    if($(v).is("a") || !v.hash){
+                    if($(v).is("a") && v.hash){
                         window.location.hash = v.hash;
                     }
 					//元素没有hash属性时
