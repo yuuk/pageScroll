@@ -1,5 +1,7 @@
 # pageScroll
-页面定位滚动
+页面定位滚动，适用于顶部悬浮导航或侧边悬浮导航，如果对代码有建议或疑问请联系email
+# 预览地址
+http://htmlpreview.github.io/?https://github.com/yuuk/pageScroll/blob/master/index.html
 # 使用方法和参数说明
 <pre>
 $.pageScroll({
