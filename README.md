@@ -1,6 +1,7 @@
 # pageScroll
 页面定位滚动
 # 使用方法和参数说明
+<pre>
 $.pageScroll({
     navObj : ".side-nav",         //导航元素
     clickItem : ".js_clickItem", //导航点击元素
@@ -18,3 +19,4 @@ $.pageScroll({
     console.log("滚动结束了");
     }
 });
+</pre>
